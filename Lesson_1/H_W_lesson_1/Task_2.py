@@ -3,3 +3,15 @@
 # ребенок, если известно, что Петя и Сережа сделали одинаковое
 # количество журавликов, а Катя сделала в два раза больше журавликов,
 # чем Петя и Сережа вместе?
+minSum = 6
+check = True
+while check:
+    sum = int(input('Задайте общее число сделанных журавликов -> '))
+    if sum < minSum or sum % minSum != 0:
+        print(f"Число должно делиться на {minSum} Таково условие задачи.")
+    else:
+        check = False
+multiplier = 2
+boy = sum // minSum
+katya = (boy + boy) * multiplier
+print(f"Петя, Катя и Серёжа сделали журавликов соответственно {boy}, {katya} и {boy}")
